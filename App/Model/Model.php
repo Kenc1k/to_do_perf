@@ -131,7 +131,7 @@ class Model extends Database {
     public static function query($query){
         $conn = self::connect();
         $stmt = $conn->prepare($query);
-        $stmt->execute();
+        $stmt->execute();   
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
