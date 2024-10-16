@@ -15,8 +15,13 @@ class UserController{
         }else{
             $tasks = Task::getTasks();
         }
+
+        if($_SESSION['user']['role'] == 'admin'){
+            return view('adminPage/index','Admin Page',$tasks);
+        }else{
+            return view2('auth/login','Login Page',$tasks);
+        }
         // dd($tasks);
-        return view('adminPage/index','Admin Page',$tasks);
     }
 
     public function users_page(){
