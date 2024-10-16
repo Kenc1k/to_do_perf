@@ -33,7 +33,7 @@ class Route{
         // dd($path,$method,$action);
 
         if(!$action){
-            echo "404 Not Found:" . $path; 
+            echo "hech narsa" . $path; 
         }
         
         if(is_array($action)){

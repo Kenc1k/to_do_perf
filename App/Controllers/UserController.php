@@ -24,7 +24,7 @@ class UserController{
         // dd($tasks);
     }
 
-    public function users_page(){
+    public function users_page(){   
         $users = User::getAll();
         return view("users/users",'Users',$users);
     }
